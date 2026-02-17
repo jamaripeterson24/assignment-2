@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets - Cosmos Park</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">🚀 COSMOS PARK</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="ride-details.html">Ride Details</a></li>
+                    <li><a href="tickets.html" class="active">Get Tickets</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Purchase Tickets</h1>
+            <p>Book your adventure at Cosmos Park today!</p>
+        </section>
+
+        <section class="ticket-selector">
+            <h2>Select Your Ticket Type</h2>
+            <div class="ticket-options">
+                <!-- Single Day Pass -->
+                <div class="ticket-option">
+                    <input type="radio" id="single-day" name="ticket-type" value="single-day" checked>
+                    <label for="single-day" class="ticket-label">
+                        <h3>Single Day Pass</h3>
+                        <p class="ticket-desc">Enjoy unlimited access to all attractions for one day</p>
+                        <div class="ticket-pricing">
+                            <div class="price-item">
+                                <span>Child (3-9 yrs):</span>
+                                <span class="price">$59.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Adult (10+ yrs):</span>
+                                <span class="price">$89.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Senior (65+):</span>
+                                <span class="price">$69.99</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Two Day Pass -->
+                <div class="ticket-option">
+                    <input type="radio" id="two-day" name="ticket-type" value="two-day">
+                    <label for="two-day" class="ticket-label">
+                        <h3>Two Day Pass</h3>
+                        <p class="ticket-desc">Visit on two separate days with unlimited access</p>
+                        <div class="ticket-pricing">
+                            <div class="price-item">
+                                <span>Child (3-9 yrs):</span>
+                                <span class="price">$99.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Adult (10+ yrs):</span>
+                                <span class="price">$149.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Senior (65+):</span>
+                                <span class="price">$119.99</span>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Annual Pass -->
+                <div class="ticket-option">
+                    <input type="radio" id="annual" name="ticket-type" value="annual">
+                    <label for="annual" class="ticket-label">
+                        <h3>Annual Pass</h3>
+                        <p class="ticket-desc">Unlimited visits for an entire year + exclusive perks</p>
+                        <div class="ticket-pricing">
+                            <div class="price-item">
+                                <span>Child (3-9 yrs):</span>
+                                <span class="price">$299.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Adult (10+ yrs):</span>
+                                <span class="price">$449.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Senior (65+):</span>
+                                <span class="price">$349.99</span>
+                            </div>
+                        </div>
+                        <p class="perks-text">✨ Includes: Priority access, 20% dining discount, free parking</p>
+                    </label>
+                </div>
+
+                <!-- Group Package -->
+                <div class="ticket-option">
+                    <input type="radio" id="group" name="ticket-type" value="group">
+                    <label for="group" class="ticket-label">
+                        <h3>Group Package</h3>
+                        <p class="ticket-desc">Perfect for schools & organizations (15+ people)</p>
+                        <div class="ticket-pricing">
+                            <div class="price-item">
+                                <span>Per Person:</span>
+                                <span class="price">$69.99</span>
+                            </div>
+                            <div class="price-item">
+                                <span>Group Leader (free):</span>
+                                <span class="price">FREE</span>
+                            </div>
+                        </div>
+                        <p class="perks-text">✨ Includes: Reserved group area, guided tour, commemorative shirt</p>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-form-section">
+            <div class="order-form">
+                <h2>Complete Your Order</h2>
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="visit-date">Preferred Visit Date:</label>
+                        <input type="date" id="visit-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num-tickets">Number of Tickets:</label>
+                        <input type="number" id="num-tickets" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address:</label>
+                        <input type="text" id="address" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP Code:</label>
+                            <input type="text" id="zip" required>
+                        </div>
+                    </div>
+
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-row">
+                            <span id="summary-tickets">Single Day Pass x1</span>
+                            <span id="summary-price">$89.99</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (6%):</span>
+                            <span id="summary-tax">$5.40</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="summary-total">$95.39</span>
+                        </div>
+                    </div>
+
+                    <h3>Payment Information</h3>
+                    <div class="form-group">
+                        <label for="card-name">Cardholder Name:</label>
+                        <input type="text" id="card-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiration Date:</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the terms and conditions</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Complete Purchase</button>
+                    <button type="reset" class="reset-btn">Clear Form</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>When can I use my ticket?</h3>
+                    <p>Single Day passes are valid for the selected date. Two-Day and Annual passes have flexible usage dates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I transfer my ticket?</h3>
+                    <p>Yes! Tickets are transferable to another person, but Annual Passes are non-transferable and photo ID-based.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your refund policy?</h3>
+                    <p>Full refunds available up to 14 days before your visit. Partial refunds within 7 days of visit date.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are there discounts available?</h3>
+                    <p>Yes! We offer discounts for military, teachers, AAA members, and advance bookings. Contact our team!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is parking included?</h3>
+                    <p>Standard parking is $15/day. Free parking included with Annual Passes and Group Packages.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can children under 3 visit free?</h3>
+                    <p>Yes! Children under 3 are free and don't need a ticket. They can enjoy most family-friendly attractions.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cosmos Park. All rights reserved. | 123 Galaxy Drive, Orlando, FL 32830 | 1-800-COSMOS-1</p>
+    </footer>
+
+    <script>
+        // Update summary when form changes
+        const ticketForm = document.getElementById('ticketForm');
+        const numTicketsInput = document.getElementById('num-tickets');
+        const ticketTypeRadios = document.querySelectorAll('input[name="ticket-type"]');
+
+        const prices = {
+            'single-day': 89.99,
+            'two-day': 149.99,
+            'annual': 449.99,
+            'group': 69.99
+        };
+
+        function updateSummary() {
+            const ticketType = document.querySelector('input[name="ticket-type"]:checked').value;
+            const numTickets = parseInt(numTicketsInput.value) || 1;
+            const pricePerTicket = prices[ticketType];
+            const subtotal = pricePerTicket * numTickets;
+            const tax = subtotal * 0.06;
+            const total = subtotal + tax;
+
+            const typeNames = {
+                'single-day': 'Single Day Pass',
+                'two-day': 'Two Day Pass',
+                'annual': 'Annual Pass',
+                'group': 'Group Package'
+            };
+
+            document.getElementById('summary-tickets').textContent = `${typeNames[ticketType]} x${numTickets}`;
+            document.getElementById('summary-price').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('summary-tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('summary-total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        ticketTypeRadios.forEach(radio => radio.addEventListener('change', updateSummary));
+        numTicketsInput.addEventListener('change', updateSummary);
+
+        // Form submission
+        ticketForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your order! Check your email for confirmation details.');
+            // In a real application, this would send data to a server
+            ticketForm.reset();
+            updateSummary();
+        });
+
+        // Initialize summary
+        updateSummary();
+    </script>
+</body>
+</html>
